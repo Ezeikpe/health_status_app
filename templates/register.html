@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Health Status Index</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        .status {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .status strong {
+            color: #4CAF50;
+        }
+        .status span {
+            color: #FF5733;
+        }
+    
+     /* Added styles for the navigation menu */
+     nav {
+         background-color: #333;
+         padding: 10px;
+     }
+     nav ul {
+         list-style-type: none;
+         padding: 0;
+         text-align: center;
+     }
+     nav li {
+         display: inline;
+         margin-right: 20px;
+     }
+     nav a {
+         color: #fff;
+         text-decoration: none;
+     }
+
+     /* Add styles for the "status-update" class */
+     .status-update {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+           box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .status-update form {
+    /* Additional styling for the form inside "status-update" */
+    margin-top: 10px;
+    }
+
+    .status-update input[type="submit"] {
+    /* Customize the submit button appearance */
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+ </style>
+
+</head>
+<body>
+    <header>
+        <h1>Health Status Index</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/vitals_form">Vitals</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+        
+    </header>
+            <h1>Register</h1>
+        
+        <main>
+            <section class="registration-form">
+                <form method="POST" action="/register">
+                    <label for="name">Full Names:</label>
+                    <input type="name" name="name" id="name" required><br><br>
+                    <label for="age">Age:</label>
+                    <input type="age" name="age" id="age" required><br><br>
+                    <label for="sex">Sex:</label>
+                    <input type="sex" name="sex" id="sex" required><br><br>
+                    <label for="username">Username:</label>
+                    <input type="username" name="username" id="username" required><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required><br><br>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" required><br><br>
+                    <label for="phone">Phone:</label>
+                    <input type="phone" name="phone" id="phone" required><br><br>
+                    <input type="submit" value="Submit">
+                  </form>
+            </section>
+            <section class="login-link">
+                <p>Already have an account? <a href="/login">Login here</a></p>
+            </section>
+        </main>
+    
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Health Status Index</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        .status {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .status strong {
+            color: #4CAF50;
+        }
+        .status span {
+            color: #FF5733;
+        }
+    </style>
+     /* Added styles for the navigation menu */
+     nav {
+         background-color: #333;
+         padding: 10px;
+     }
+     nav ul {
+         list-style-type: none;
+         padding: 0;
+         text-align: center;
+     }
+     nav li {
+         display: inline;
+         margin-right: 20px;
+     }
+     nav a {
+         color: #fff;
+         text-decoration: none;
+     }
+ </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Patient Info</a></li>
+                <li><a href="#">Health Status</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+        <h1>Health Status Index</h1>
+    </header>
+        <h1>Health Status Index</h1>
+    </header>
+    <div class="container">
+        <h1 style="color: blue; text-align: center;">Upload Patient Vitals</h1>
+    <form method="POST">
+        <label for="user_id">User ID:</label>
+        <input type="text" id="user_id" name="user_id" required style="border: 1px solid #ccc; padding: 5px;"><br><br>
+        
+        <label for="bmi">BMI:</label>
+        <input type="number" id="bmi" name="bmi" step="0.01" required style="border: 1px solid #ccc; padding: 5px;"><br><br>
+        
+        <label for="heart_rate">Heart Rate:</label>
+        <input type="number" id="heart_rate" name="heart_rate" required style="border: 1px solid 
+        #ccc; padding: 5px;"><br><br>
+        
+        <label for="bp">Blood Pressure:</label>
+        <input type="text" id="bp" name="bp" required style="border: 1px solid #ccc; padding: 5px;"><br><br>
+        
+        <label for="sugar_level">Sugar Level:</label>
+        <input type="number" id="sugar_level" name="sugar_level" step="0.01" required style="border: 1px solid #ccc; padding: 5px;"><br><br>
+        
+        <label for="blood_percentage">Blood Percentage:</label>
+        <input type="number" id="blood_percentage" name="blood_percentage" step="0.01" required style="border: 1px solid #ccc; padding: 5px;"><br><br>
+
+        <input type="submit" value="Submit" style="background-color: #007bff; color: #fff; padding: 10px 20px; border: none; cursor: pointer;">
+    </form>
+        <!-- Add more health status indicators as needed -->
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Health Status Index</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        .status {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .status strong {
+            color: #4CAF50;
+        }
+        .status span {
+            color: #FF5733;
+        }
+    
+     /* Added styles for the navigation menu */
+     nav {
+         background-color: #333;
+         padding: 10px;
+     }
+     nav ul {
+         list-style-type: none;
+         padding: 0;
+         text-align: center;
+     }
+     nav li {
+         display: inline;
+         margin-right: 20px;
+     }
+     nav a {
+         color: #fff;
+         text-decoration: none;
+     }
+
+     /* Add styles for the "status-update" class */
+     .status-update {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+           box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .status-update form {
+    /* Additional styling for the form inside "status-update" */
+    margin-top: 10px;
+    }
+
+    .status-update input[type="submit"] {
+    /* Customize the submit button appearance */
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+ </style>
+
+</head>
+<body>
+    <header>
+        <h1>Health Status App</h1>
+    </header>
+	 <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/login">My Health Status</a></li>
+                <li><a href="/user_register">Sign Up</a></li>
+                <li><a href="/health_tips">Health Tips</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+        
+        <div class="container">
+        <h1>Contact Form</h1><br><br>
+  <form method="POST" action="/contact">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required><br><br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required><br><br>
+    <label for="message">Message:</label><br>
+    <textarea name="message" id="message" rows="5" required></textarea><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<div class="container">
+    <h5> Designed by Ezeikpe Ifenkwem - An ALX Final Project</h5>
+
+</div>
+</body>
+</html>

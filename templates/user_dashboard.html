@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Health Status Index</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        .status {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .status strong {
+            color: #4CAF50;
+        }
+        .status span {
+            color: #FF5733;
+        }
+    
+     /* Added styles for the navigation menu */
+     nav {
+         background-color: #333;
+         padding: 10px;
+     }
+     nav ul {
+         list-style-type: none;
+         padding: 0;
+         text-align: center;
+     }
+     nav li {
+         display: inline;
+         margin-right: 20px;
+     }
+     nav a {
+         color: #fff;
+         text-decoration: none;
+     }
+
+     /* Add styles for the "status-update" class */
+     .status-update {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+           box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .status-update form {
+    /* Additional styling for the form inside "status-update" */
+    margin-top: 10px;
+    }
+
+    .status-update input[type="submit"] {
+    /* Customize the submit button appearance */
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+
+
+ </style>
+
+</head>
+<body>
+    <header>
+        <h1>Health Status App</h1>
+    </header>
+	 <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/login">My Health Status</a></li>
+                <li><a href="/user_register">Sign Up</a></li>
+                <li><a href="/health_tips">Health Tips</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+    <div class="container">
+        <h2>Complete your database</h2>
+        <!-- Patient Submission Form -->
+    <form method="post" action="{{ url_for('add_patient') }}">
+        <label for="fullname">Full Name:</label>
+        <input type="text" name="fullname" required>
+        <label for="age">Age:</label>
+        <input type="text" name="age" required>
+        <label for="sex">Sex:</label>
+        <input type="text" name="sex" required>
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" required>
+        <label for="address">Address:</label>
+        <input type="text" name="address" required>
+        <label for="blood_group">Blood Group:</label>
+        <input type="text" name="blood_group" required>
+        <label for="weight">Weight Mass:</label>
+        <input type="text" name="weight" required>
+        <label for="genotype">Genotype:</label>
+        <input type="text" name="genotype" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Display Patient -->
+    <h2>Patient List:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full Names</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Blood Group</th>
+                <th>Weight Mass</th>
+                <th>Genotype</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for patient in data %}
+                <tr>
+                    <td>{{ patient.id }}</td>
+                    <td>{{ patient.fullname }}</td>
+                    <td>{{ patient.age }}</td>
+                    <td>{{ patient.sex }}</td>
+                    <td>{{ patient.phone }}</td>
+                    <td>{{ patient.address }}</td>
+                    <td>{{ patient.blood_group }}</td>
+                    <td>{{ patient.weight }}</td>
+                    <td>{{ patient.genotype }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    </div>
+    
+    <div class="container">
+        <h2>Recent Health Status</h2>
+        
+    
+    
+    </div>  
+
+
+    <div class="container">
+        <h2>Update Your Health Status</h2>
+        <form method="POST" action="user_dashboard">
+            <label for="bmi">BMI:</label>
+        <input type="number" id="bmi" name="bmi" step="0.01" required style="border: 1px solid #ccc; padding: 5px;"><br><br>
+        
+        <label for="heart_rate">Heart Rate:</label>
+        <input type="number" id="heart_rate" name="heart_rate" required style="border: 1px solid 
+        #ccc; padding: 5px;"><br><br>
+        
+        <label for="bp">Blood Pressure:</label>
+        <input type="text" id="bp" name="bp" required style="border: 1px solid #ccc; padding: 5px;"><br><br>
+        
+        <label for="sugar_level">Sugar Level:</label>
+        <input type="number" id="sugar_level" name="sugar_level" step="0.01" required style="border: 1px solid #ccc; padding: 5px;"><br><br>
+        
+        <label for="blood_percentage">Blood Percentage:</label>
+        <input type="number" id="blood_percentage" name="blood_percentage" step="0.01" required style="border: 1px solid #ccc; padding: 5px;"><br><br>
+            <input type="submit" value="Update Status">
+        </form>
+    </div>
+    <div class="container">
+        <h5> Designed by Ezeikpe Ifenkwem - An ALX Final Project</h5>
+    
+    </div>
+
+</body>
+</html>
